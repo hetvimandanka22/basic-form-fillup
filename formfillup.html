@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>form submition example</title>
+</head>
+<body>
+    <h2>simple form with Alert</h2>
+   <input type = "name" placeholder="name">
+   <label  for="password" id="password" name="password"required></label>
+   <input type="password" placeholder="password"><br>
+   <button type="SUBMIT">submit</button>
+   <script>
+    const form = document.getElementById("examform");
+    form.addEventListener("sunmit",function(event){
+        event.preventDefault();
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        alert(form submitted!\nusername :${username}\npassword:${password});
+    });
+   </script>
+</body>
+</html>
